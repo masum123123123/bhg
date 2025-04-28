@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TahJami Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo" onclick="handleLogoClick()">
+            <span>TahJami Web 🌐</span>
+        </div>
+        <div class="buttons">
+            <button class="login-btn" onclick="showLoginForm()">Login</button>
+            <button class="signup-btn" onclick="showSignupForm()">Sign Up</button>
+        </div>
+    </nav>
+
+    <div class="loader"></div>
+
+    <!-- Signup Form -->
+    <div class="form-container" id="signup-form">
+        <h2>Sign Up</h2>
+        <form onsubmit="handleSignup(event)">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="text" placeholder="Username" required>
+            <input type="email" placeholder="Email" required>
+            <input type="date" placeholder="Date of Birth" required>
+            <input type="date" placeholder="Sign Up Date" required readonly>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <!-- Login Form -->
+    <div class="form-container" id="login-form">
+        <h2>Login</h2>
+        <form onsubmit="handleLogin(event)">
+            <input type="text" placeholder="Username or Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script src="min.js"></script>
+</body>
+</html>
+
+
+
+
+

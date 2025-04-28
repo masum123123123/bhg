@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TahJami Web - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo" onclick="handleLogoClick()">
+            <span>TahJami Web 🌐</span>
+        </div>
+        <div class="buttons">
+            <button class="guild-btn" onclick="showGuild()">⚔️</button>
+            <button class="profile-btn" onclick="showProfile()">👤 Profile</button>
+        </div>
+    </nav>
+
+    <div class="loader"></div>
+
+    <!-- Profile Modal -->
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <h2>Profile Information</h2>
+            <div class="profile-info">
+                <div class="profile-upload">
+                    <img id="profile-image" src="default-avatar.png" alt="Profile Picture">
+                    <input type="file" id="profile-pic-update" accept="image/*" onchange="updateProfilePicture(event)">
+                    <label for="profile-pic-update">📸 Update Photo</label>
+                </div>
+                
+                <div class="balance-info">
+                    <div class="balance-item">
+                        <span class="balance-title">💵 Dollar Balance</span>
+                        <span class="balance-amount">$00.00</span>
+                    </div>
+                    <div class="balance-item">
+                        <span class="balance-title">🪙 JamiCoin Balance</span>
+                        <span class="balance-amount">00.00 JC</span>
+                    </div>
+                </div>
+
+                <p><strong>First Name:</strong> <span id="firstName"></span></p>
+                <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+                <p><strong>Username:</strong> <span id="username"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <p><strong>Date of Birth:</strong> <span id="dateOfBirth"></span></p>
+                <p><strong>Signup Date:</strong> <span id="signupDate"></span></p>
+                <p class="password-field">
+                    <strong>Password:</strong> 
+                    <span id="password">••••••</span>
+                    <span class="password-toggle" onclick="togglePassword()">👁️</span>
+                </p>
+            </div>
+            <div class="modal-buttons">
+                <button class="close-btn" onclick="closeProfile()">Close</button>
+                <button class="logout-btn" onclick="handleLogout()">Logout</button>
+            </div>
+        </div>
+    </div>
+    <script src="homepage.js"></script>
+</body>
+</html>

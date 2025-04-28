@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="login-container" id="loginForm">
+        <h2>Admin Login</h2>
+        <form id="adminLoginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="number" id="pin" placeholder="PIN" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="dashboard" id="dashboard" style="display:none;">
+        <nav>
+            <h2>Admin Dashboard</h2>
+            <button onclick="logout()">Logout</button>
+        </nav>
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Total Users</h3>
+                <p id="totalUsers">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>New Signups</h3>
+                <p id="newSignups">0</p>
+            </div>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
